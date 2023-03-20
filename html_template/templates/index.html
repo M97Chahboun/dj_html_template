@@ -77,20 +77,20 @@
             <h6 class="section-title text-center">Our Service</h6>
             <h6 class="section-subtitle text-center mb-5 pb-3">Voluptates architecto provident deserunt.</h6>
             <div class="row">
+                {% for service in services %}
                 <div class="col-md-4">
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">01</small>
-                            <h5 class="card-title mt-3"> Beatae quo <h5>
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis
-                                        saepe dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab fuga
-                                        quae, minima reprehenderit sequi fugit.</p>
+                            <small class="text-primary font-weight-bold">{{ forloop.counter }}</small>
+                            <h5 class="card-title mt-3">{{ service.title }}<h5>
+                                    <p class="mb-0">{{ service.description }}</p>
                                 </h5>
                             </h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                {% endfor %}
+                <!-- <div class="col-md-4">
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">02</small>
@@ -115,7 +115,7 @@
                             </h5>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
